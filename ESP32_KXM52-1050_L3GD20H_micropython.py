@@ -52,7 +52,6 @@ try:
         x_v = x.read_u16()
         y_v = y.read_u16()
         z_v = z.read_u16()
-        nowtime = time.ticks_ms() - first_time
         
         # センサデータを加速度[m/s^2]へ変換する
         x_val = kasoku(x_v)
@@ -83,6 +82,7 @@ try:
         angular_velocity_y = wy * 0.07
         angular_velocity_z = wz * 0.07
         #########################################################################################
+        nowtime = time.ticks_ms() - first_time
         
         f.write(str(nowtime) + ", " + str(x_val) + ", " + str(y_val) + ", " + str(z_val) + ", " + str(angular_velocity_x) + ", " + str(angular_velocity_y) + ", " + str(angular_velocity_z) + "\n")
         print(str(nowtime) + ", X: " + str(x_val) + ", Y: " + str(y_val) + ", Z:" + str(z_val))
