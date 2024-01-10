@@ -37,7 +37,7 @@ ANGULAR_VELOCITY_REG = 0x28
 first_time = time.ticks_ms()
 
 # 取得データの書き込み先のファイルを開く
-f = open('data_test.txt', 'w')
+f = open('data.txt', 'w')
 
 # Ctrl + Cで停止させた後に、ファイルに書き込むためにtry文でwhileを回す
 try:
