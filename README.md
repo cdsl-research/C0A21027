@@ -1,10 +1,10 @@
 # ESP32でMicroPythonを用いて，KXM52-1050(加速度センサ)，L3GD20H(ジャイロセンサ)を利用する．
 ## ESP32_KXM52-1050_L3GD20H_micropython.py
 ### 概要
-ESP32でMicroPythonを利用して加速度と角速度を得るために，加速度センサ(KXM52-1050)，ジャイロセンサ(L3GD20H)を利用します．
-以下のモジュールをインポートしています．
-from machine import ADC, PWM, Pin, I2C
-impot time
+ESP32でMicroPythonを利用して加速度と角速度を得るために，加速度センサ(KXM52-1050)，ジャイロセンサ(L3GD20H)を利用します．  
+以下のモジュールをインポートしています．  
+from machine import ADC, PWM, Pin, I2C  
+impot time  
 Thoonyで開くことを前提にしており，Ctrl + Cでデータの取得を終了するようにしています．
 ### KXM52-1050とESP32の接続方法
 * 1PIN ESP32の3.3V電源および，KXM52-1050の2PIN
