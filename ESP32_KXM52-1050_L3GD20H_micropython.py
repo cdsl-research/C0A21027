@@ -83,8 +83,10 @@ try:
         angular_velocity_z = wz * 0.07
         #########################################################################################
         nowtime = time.ticks_ms() - first_time
-        
+
+        # ファイルへの書き込み
         f.write(str(nowtime) + ", " + str(x_val) + ", " + str(y_val) + ", " + str(z_val) + ", " + str(angular_velocity_x) + ", " + str(angular_velocity_y) + ", " + str(angular_velocity_z) + "\n")
+        # シェルへの書き込み
         print(str(nowtime) + ", X: " + str(x_val) + ", Y: " + str(y_val) + ", Z:" + str(z_val) + ", WX:" + str(angular_velocity_x) + ", WY" + str(angular_velocity_y) +  ", WZ" + str(angular_velocity_z))
         
         time.sleep(0.03)
